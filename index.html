@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Single Price Grid Component</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+
+    :root {
+        --cyan: hsl(179, 62%, 43%);
+        --brightyellow: hsl(71, 73%, 54%);
+        --Lightgray: hsl(204, 43%, 93%);
+        --grayishblue: hsl(218, 22%, 67%);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: var(--Lightgray);
+    }
+
+    html {
+        font-size: 62.5%;
+        font-family: 'Karla', sans-serif;
+    }
+
+    main {
+        /*      max-width: 375px;*/
+        margin: 5rem 4rem;
+        box-shadow: 0px 0px 11px 0px #e7e7e7;
+
+    }
+
+    .gurrantee {
+        margin-top: 2.5rem;
+        background: #fff;
+        border-radius: 5px 5px 0 0;
+        padding: 3rem 2rem;
+    }
+
+    .gurrantee h1 {
+        color: var(--cyan);
+        font-size: 2rem;
+    }
+
+    .gurrantee h2 {
+        margin: 1.5rem 0;
+        color: var(--brightyellow);
+        font-size: 1.7rem;
+    }
+
+    .gurrantee p {
+        color: var(--grayishblue);
+        font-size: 1.3rem;
+        line-height: 2.5rem;
+    }
+
+    /*   SUBSCRIPTION */
+    .subscription {
+        padding: 3rem 1.8rem;
+        background: var(--cyan);
+        color: #fff;
+    }
+
+    .subscription h2 {
+        font-size: 2rem;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+        margin: 1.2rem 0;
+        gap: 1rem;
+    }
+
+    .price span:first-child {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .price span:last-child {
+        font-size: 1.3rem;
+        color: var(--Lightgray);
+    }
+
+    .subscription p {
+        font-size: 1.3rem;
+    }
+
+    .subscription button {
+        width: 100%;
+        background: var(--brightyellow);
+        color: #fff;
+        margin-top: 2.5rem;
+        outline: none;
+        border: none;
+        padding: 1.5rem 0;
+        border-radius: 5px;
+        font-size: 1.7rem;
+        font-weight: 700;
+        box-shadow: 0px 0px 3px 0px #706f6f;
+        cursor: pointer;
+        transition: .3s ease;
+
+    }
+
+    .subscription button:hover {
+        background: var(--Lightgray);
+        color: var(--cyan);
+    }
+
+    .askWhy {
+        padding: 3rem 1.8rem;
+        background: #6AC9C8;
+        border-radius: 0 0 5px 5px;
+    }
+
+    .askWhy h2 {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .askWhy ul {
+        list-style: none;
+        margin-top: 2rem;
+    }
+
+    .askWhy ul>li {
+        color: var(--Lightgray);
+        font-size: 1.3rem;
+        margin-bottom: .8rem;
+        font-weight: 300;
+    }
+
+
+    @media (min-width:768px) {
+        main {
+            max-width: 700px;
+            margin: 5rem auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            box-shadow: 0px 0px 11px 0px #e7e7e7
+        }
+
+
+        .gurrantee {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            margin: 0;
+        }
+
+        .subscription {
+            border-bottom-left-radius: 10px;
+        }
+
+        .askWhy {
+            border-radius: 0;
+            border-bottom-right-radius: 1rem;
+        }
+
+        .gurrantee,
+        .subscription,
+        .askWhy {
+            padding: 3.5rem 4rem;
+
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="gurrantee">
+            <h1>
+                Join our community
+            </h1>
+            <h2>
+                30-day, hassle-free money back guarantee
+            </h2>
+            <p>
+                Gain access to our full library of tutorials along with expert code reviews.
+                Perfect for any developers who are serious about honing their skills.
+            </p>
+        </div>
+        <div class="subscription">
+            <h2>
+                Monthly Subscription
+            </h2>
+            <div class="price">
+                <span>
+                    &dollar;29
+                </span>
+                <span>Per month</span>
+            </div>
+            <p>
+                Full access for less than &dollar;1 a day
+            </p>
+            <button>
+                Sign Up
+            </button>
+        </div>
+        <div class="askWhy">
+            <h2>
+                Why Us
+            </h2>
+            <ul>
+                <li>
+                    Tutorials by industry experts
+                </li>
+                <li>
+                    Peer &amp; expert code review
+                </li>
+                <li>
+                    Coding exercises
+                </li>
+                <li>
+                    Access to our GitHub repos
+                </li>
+                <li>
+                    Community forum
+                </li>
+                <li>
+                    Flashcard decks
+                </li>
+                <li>
+                    New videos every week
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Your Name Here</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
